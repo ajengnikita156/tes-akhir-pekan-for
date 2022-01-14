@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<header style="background-color:#6916f0; padding: 20px; color: #fff;">
+    <div class="wrapper">
+      <div class="sidebar-header">
+          <h1> TES  AKHIR  PEKAN</h1>
+      </div>
+</header>
+<br><br><br><br>
+<body>
+    
+    <center>
+    <input type="text" id="jumlah" >
+    <br><br>
+    <select name="pilih" id="pilih">
+        <option value="swit" id="swit">SWITCH CASE</option>
+        <option value="kelipatan2" id="kelipatan2">KELIPATAN 2</option>
+        <option value="kelipatan5" id="kelipatan5">KELIPATAN 5</option>
+        <option value="gangep" id="gangep">GANJIL GENAP</option>
+        <option value="kuadrat" id="kuadrat">KUADRAT</option>
+    </select>
+    <br><br>
+    <button onclick="submit()">submit</button>
+</center>
+    <script>
+        function submit(){
+            var swit = document.getElementById("swit").value;
+            var kelipatan2 = document.getElementById("kelipatan2").value;
+            var kelipatan5 = document.getElementById("kelipatan5").value;
+            var gangep = document.getElementById("gangep").value;
+            var kuadrat = document.getElementById("kuadrat").value;
+            var jumlah = document.getElementById("jumlah").value;
+            var pilih = document.getElementById("pilih").value;
+
+
+            if(pilih == "swit"){
+                var jumlah = document.getElementById("jumlah").value    ; 
+  var nama_bulan;
+  switch(jumlah){ 
+  case "1":
+  nama_bulan = "JANUARI";
+  break;
+  case "2":
+  nama_bulan = "FEBRUARI";
+  break;
+  case "3":
+  nama_bulan = "MARET";
+  break;
+  case "4":
+  nama_bulan = "APRIL"; 
+  break;
+  case "5":
+  nama_bulan = "MEI";
+  break;
+  case "6":
+  nama_bulan = "JUNI"; 
+  break;
+  case "7": 
+  nama_bulan = "JULI";
+  break;
+  case "8": 
+  nama_bulan = "AGUSTUS";
+  break;
+  case "9": 
+  nama_bulan = "SEPTEMBER";
+  break;
+  case "10": 
+  nama_bulan = "OKTOBER";
+  break;
+  case "11": 
+  nama_bulan = "NOVEMBER";
+  break;
+  case "12": 
+  nama_bulan= "DESEMBER";
+  break;
+  default:
+  nama_bulan = "Kode bulan yang anda masukan salah";
+   } document.write("Bulan = "+nama_bulan);
+            }
+
+
+            if(pilih == "kelipatan2"){ 
+
+               for(var i = 1; i <= jumlah; i++){
+                    if(i % 2 == 0)
+               document.write( i + "<br>");        
+            }
+        }
+           
+
+            if(pilih == "kelipatan5"){
+                for(var i= jumlah; i >= 5; i--){
+                   if (i % 5 == 0)
+                   document.write(i +"<br>");
+             }
+         }
+        
+           if(pilih == "gangep"){
+            for (var i=1; i <= 20; i++){
+           if(i % 2 == 0){
+          document.write( i + "adalah angka genap" + "<br>")
+          console.log( i + "adalah angka genap")
+           }
+       else {
+           document.write(i + "adalah angka ganjil" + "<br>")
+           console.log( i + "adalah angka ganjil" )
+       }
+    }
+}    
+        if(pilih == "kuadrat"){
+            for (var i=1; i <= jumlah; i++){
+        if (i % 2 == 1){
+        hasil = i * i;
+            document.write( " hasil " + hasil +"<br>");
+        } 
+    } 
+        if (i % 2 == 0){
+        hasil = i*i;
+        document.write( " hasil" + hasil + "<br>");
+        }
+    }
+}
+    </script>
+
+    <style>
+        body{
+            background-image: url(bg.jpg) ;
+        }
+        input{
+            width:350px ;
+            height: 30px;
+            background-color: #47b6f7;
+        }
+        select{
+            width: 350px ;
+            height: 30px;
+            background-color: #47b6f7;
+
+        }
+        button{
+            width:350px ;
+            height: 30px;
+            background-color: #f04216;
+        }
+    </style>
+</body>
+</html>
